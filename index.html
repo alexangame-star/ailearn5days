@@ -594,6 +594,16 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 .f-links a{font-size:.8rem;color:var(--muted);text-decoration:none;transition:color .2s;letter-spacing:.06em;}
 .f-links a:hover{color:var(--marsala);}
 .f-copy{font-size:.75rem;color:var(--muted);width:100%;text-align:center;padding-top:24px;border-top:1px solid var(--border);margin-top:12px;}
+
+/* ── FOR WHOM grid ── */
+@media(max-width:680px){.for-whom-grid{grid-template-columns:1fr!important;}}
+/* ── STICKY CTA ── */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(250,246,240,.97);backdrop-filter:blur(16px);border-top:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;transform:translateY(100%);transition:transform .4s cubic-bezier(.25,.8,.25,1);box-shadow:0 -4px 24px rgba(139,32,64,.08);}
+.sticky-cta.visible{transform:translateY(0);}
+.sticky-cta-text{font-size:.9rem;color:var(--text);font-weight:300;}
+.sticky-cta-text strong{color:var(--marsala);}
+.sticky-cta-btn{padding:12px 28px;border-radius:2px;background:linear-gradient(135deg,var(--marsala2),var(--marsala),var(--gold2));color:#fff;font-weight:600;font-size:.825rem;text-decoration:none;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;transition:all .3s;box-shadow:0 0 20px var(--glow-m);}
+.sticky-cta-btn:hover{transform:translateY(-1px);box-shadow:0 4px 24px var(--glow-m);}
 </style>
 </head>
 <body>
@@ -604,7 +614,7 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 <!-- NAV -->
 <nav>
   <div class="nav-logo"><em>AI</em>-Запуск</div>
-  <a href="#pricing" class="nav-cta">Зайняти місце</a>
+  <a href="#pricing" class="nav-cta">🔥 Запуститись за 5 днів</a>
 </nav>
 
 <!-- HERO -->
@@ -614,103 +624,325 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
   <canvas id="neural"></canvas>
 
   <div class="hero-inner">
-    <div class="hero-tag"><span class="dot"></span>5-денний інтенсив · 4 нейромережі · Без команди</div>
+    <div class="hero-tag"><span class="dot"></span>Вже 500+ експертів запустились. Наступний — ви.</div>
 
-    <h1>Створіть та запустіть<br>свій <em>інфопродукт</em></h1>
+    <h1>Запустіть свій курс<br>за <em>5 днів</em> — без команди,<br>технічного «пекла» і прокрастинації</h1>
 
     <div class="hero-typewriter">
       <span id="tw-text"></span><span class="tw-cursor"></span>
     </div>
 
     <p class="hero-sub">
-      Аналіз конкурентів, методологія, сайт та воронка продажів.<br>
-      Все це — за допомогою <strong>GPT, Claude, Lovable та NotebookLM</strong>.<br>
-      Без технічних знань та черг до розробників.
+      AI зробить 90% структури, сайту і воронки.<br>
+      Ви — тільки <strong>приймаєте рішення і запускаєтесь.</strong>
     </p>
 
     <div class="hero-cta-row">
-      <a href="#pricing" class="btn-main">Зайняти місце на курсі</a>
-      <a href="#program" class="btn-ghost">Переглянути програму ↓</a>
+      <a href="#pricing" class="btn-main">🔥 Хочу запуститись за 5 днів</a>
+      <a href="#program" class="btn-ghost">Як це працює ↓</a>
     </div>
 
+    <p style="margin-top:16px;font-size:.85rem;color:var(--muted);animation:fadeUp .8s .5s ease both;opacity:0;">
+      Підійде тим, хто застряг на етапі «я ще допрацьовую програму»
+    </p>
+
     <div class="hero-trust">
-      <div class="trust-item"><span>✦</span> 5 днів — готовий продукт</div>
-      <div class="trust-item"><span>✦</span> 4 AI-інструменти</div>
+      <div class="trust-item"><span>✦</span> 0 розробників</div>
+      <div class="trust-item"><span>✦</span> 0 технічних знань</div>
       <div class="trust-item"><span>✦</span> Гарантія 14 днів</div>
       <div class="trust-item"><span>✦</span> Від 349 грн</div>
     </div>
   </div>
 </section>
 
-<!-- STATS BAR -->
+<!-- STATS BAR — переосмислено як "зняття страху" -->
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat-block"><div class="stat-val" data-count="500">0</div><div class="stat-lab">Випускників</div></div>
-    <div class="stat-block"><div class="stat-val" data-count="5">0</div><div class="stat-lab">Днів до результату</div></div>
-    <div class="stat-block"><div class="stat-val" data-count="4">0</div><div class="stat-lab">AI-інструменти</div></div>
-    <div class="stat-block"><div class="stat-val" data-count="90">0</div><div class="stat-lab">% роботи робить AI</div></div>
+    <div class="stat-block">
+      <div class="stat-val" data-count="500">0</div>
+      <div class="stat-lab">Експертів вже запустили</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-val" data-count="5">0</div>
+      <div class="stat-lab">Днів від ідеї до лендінгу</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-val" data-count="0">0</div>
+      <div class="stat-lab">Розробників потрібно</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-val" data-count="90">0</div>
+      <div class="stat-lab">% роботи бере AI</div>
+    </div>
+  </div>
+  <div style="max-width:900px;margin:32px auto 0;padding:0 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+    <span style="padding:8px 18px;border-radius:100px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.8rem;color:rgba(232,207,160,.8);">✓ Структуру курсу пише AI</span>
+    <span style="padding:8px 18px;border-radius:100px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.8rem;color:rgba(232,207,160,.8);">✓ Аналіз конкурентів — AI</span>
+    <span style="padding:8px 18px;border-radius:100px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.8rem;color:rgba(232,207,160,.8);">✓ Сайт — AI</span>
+    <span style="padding:8px 18px;border-radius:100px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.8rem;color:rgba(232,207,160,.8);">✓ Сценарії прогріву — AI</span>
   </div>
 </div>
 
-<!-- PAIN -->
+<!-- PAIN — з емоційним вступом -->
 <section class="pain-sec">
   <div class="wrap">
     <div class="pain-header">
       <div class="r">
-        <p class="s-label">Проблема</p>
-        <h2 class="pain-pull">Чому ви досі не запустили свій <em>курс?</em></h2>
+        <p class="s-label">Впізнаєте себе?</p>
+        <h2 class="pain-pull">Ви давно готові.<br>Але постійно <em>щось не так.</em></h2>
       </div>
-      <p class="r d1" style="font-size:1.05rem;line-height:1.85;font-weight:300;">
-        Маєте експертизу. Маєте бажання. Але щоразу щось заважає. Ось чотири найчастіші причини — і чому AI вирішує кожну з них.
-      </p>
+      <div class="r d1" style="padding:32px;background:rgba(139,32,64,.04);border-left:3px solid var(--marsala);border-radius:0 6px 6px 0;">
+        <p style="font-size:1rem;line-height:2;font-weight:300;color:var(--text);">
+          — треба ще допрацювати програму<br>
+          — треба знайти дизайнера<br>
+          — треба розібратись із сайтом<br>
+          — треба підготувати прогрів<br><br>
+          <strong style="color:var(--marsala);">І минає ще один місяць.</strong>
+        </p>
+      </div>
     </div>
     <div class="pain-grid">
-      <div class="pain-card r d1"><span class="pain-num">01</span><div class="pain-glyph">💸</div><h3>Дорого наймати команду</h3><p>Маркетолог + дизайнер + розробник = $1000+. AI-стек коштує до $50/місяць або безкоштовно.</p></div>
-      <div class="pain-card r d2"><span class="pain-num">02</span><div class="pain-glyph">🧩</div><h3>Складна структура</h3><p>Важко перетворити знання на курс, який дає результат. Claude та NotebookLM зроблять методологію за вас.</p></div>
-      <div class="pain-card r d3"><span class="pain-num">03</span><div class="pain-glyph">⚙️</div><h3>Технічний «ліс»</h3><p>Сайт, оплати, автоматизація — все лякає. Lovable генерує лендінг за 30 хвилин без рядка коду.</p></div>
-      <div class="pain-card r d4"><span class="pain-num">04</span><div class="pain-glyph">🕐</div><h3>Немає часу на прогрів</h3><p>Claude за 20 хвилин створює всю контентну воронку та сценарії для вашого запуску.</p></div>
+      <div class="pain-card r d1">
+        <span class="pain-num">01</span>
+        <div class="pain-glyph">💸</div>
+        <h3>Команда коштує $1000+</h3>
+        <p>Маркетолог, дизайнер, розробник — і це ще до першого продажу. AI-стек замінює їх усіх за $0–50/міс.</p>
+      </div>
+      <div class="pain-card r d2">
+        <span class="pain-num">02</span>
+        <div class="pain-glyph">🧩</div>
+        <h3>Не знаєте, як упакувати знання</h3>
+        <p>Ви експерт, але не методолог. Claude і NotebookLM розкладуть ваші знання по модулях, логіці та результатах — за вас.</p>
+      </div>
+      <div class="pain-card r d3">
+        <span class="pain-num">03</span>
+        <div class="pain-glyph">⚙️</div>
+        <h3>Технічна частина лякає</h3>
+        <p>Сайт, оплати, доступи — звучить як пекло. Lovable генерує готовий продажний лендінг за 30 хвилин без єдиного рядка коду.</p>
+      </div>
+      <div class="pain-card r d4">
+        <span class="pain-num">04</span>
+        <div class="pain-glyph">📅</div>
+        <h3>Відкладаєте вже місяцями</h3>
+        <p>Не через ліньки. Через хаос рішень. Чіткий план на 5 днів прибирає паралізуючу невизначеність — і ви нарешті запускаєтесь.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SOLUTION -->
+<!-- BURNOUT — новий блок про вигорання -->
 <section class="solution-sec">
   <div class="wrap">
     <div class="solution-frame r">
-      <p class="s-label">Рішення</p>
-      <h2>AI-Запуск — ваш шлях до результату<br>в <em>10 разів швидше</em></h2>
-      <p>Ви не вчитеся «користуватися нейронками» — ви використовуєте їх як конкретні бізнес-інструменти. Кожен день — завдання. Кожен інструмент — результат. За 5 днів: готовий інфопродукт, сайт та перші клієнти.</p>
-      <div class="solution-chip">AI зробить 90% технічної та маркетингової роботи за вас</div>
+      <p class="s-label">Важливо знати</p>
+      <h2>Ви не лінуєтесь.<br>Ви перевантажені <em>хаосом рішень.</em></h2>
+      <p>
+        Експерти вигоряють не через роботу — вони вигоряють через нескінченний список «що зробити спочатку». Курс чи марафон? Яка платформа? Як писати прогрів? Скільки коштує?
+        <br><br>
+        AI-Запуск — це <strong style="color:var(--marsala);">не ще один курс про AI.</strong> Це чітка структура на 5 днів, де кожне рішення вже прийнято за вас. Ви просто рухаєтесь вперед.
+      </p>
+      <div class="solution-chip">Структура = спокій. Спокій = дія. Дія = запуск.</div>
     </div>
   </div>
 </section>
 
-<!-- ROADMAP -->
+<!-- FOR WHOM — новий блок -->
+<section class="roadmap-sec" style="background:var(--cream);">
+  <div class="wrap">
+    <p class="s-label r">Для кого</p>
+    <h2 class="s-title r">Цей курс — <em>для вас,</em> якщо...</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;max-width:860px;">
+      <div class="r d1" style="padding:36px;border-radius:6px;background:var(--card);border:1px solid var(--border);box-shadow:0 2px 16px rgba(139,32,64,.04);">
+        <p style="font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--marsala);margin-bottom:20px;">✦ Підійде вам</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:14px;">
+          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;"><span style="color:var(--marsala);flex-shrink:0;margin-top:2px;">✓</span>Ви експерт і хочете перейти на новий рівень доходу</li>
+          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;"><span style="color:var(--marsala);flex-shrink:0;margin-top:2px;">✓</span>Є аудиторія, але немає системного продукту</li>
+          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;"><span style="color:var(--marsala);flex-shrink:0;margin-top:2px;">✓</span>Вже запускали, але без структури і результату</li>
+          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;"><span style="color:var(--marsala);flex-shrink:0;margin-top:2px;">✓</span>Боїтесь технічної частини</li>
+          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;"><span style="color:var(--marsala);flex-shrink:0;margin-top:2px;">✓</span>Відкладаєте запуск більше 3 місяців</li>
+        </ul>
+      </div>
+      <div class="r d2" style="padding:36px;border-radius:6px;background:rgba(139,32,64,.03);border:1px solid rgba(139,32,64,.1);">
+        <p style="font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;">✕ Не підійде</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:14px;">
+          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;color:var(--muted);"><span style="flex-shrink:0;margin-top:2px;">✕</span>Хто хоче «просто погратися з AI» без мети</li>
+          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;color:var(--muted);"><span style="flex-shrink:0;margin-top:2px;">✕</span>Хто чекає чарівну кнопку без жодних дій</li>
+          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;color:var(--muted);"><span style="flex-shrink:0;margin-top:2px;">✕</span>Хто не готовий виділяти 1.5–2 год на день</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP — переписано через результат -->
 <section class="roadmap-sec" id="program">
   <div class="wrap">
     <p class="s-label r">Програма</p>
-    <h2 class="s-title r">Дорожня карта <em>5 днів</em></h2>
+    <h2 class="s-title r">Що у вас буде<br>після кожного <em>дня</em></h2>
     <div class="roadmap-list">
-      <div class="day-row r d1"><div class="day-node"><div class="day-orb">1</div></div><div class="day-body"><p class="day-meta">День перший · Фундамент</p><h3>Аналіз ринку та цільової аудиторії</h3><p>Визначаємо нішу, аналізуємо конкурентів та болі аудиторії. Ви точно знаєте, кому і що продаєте.</p><div class="day-pills"><span class="day-pill">Claude</span><span class="day-pill">ChatGPT</span></div></div></div>
-      <div class="day-row r d2"><div class="day-node"><div class="day-orb">2</div></div><div class="day-body"><p class="day-meta">День другий · Продукт</p><h3>Методологія та непереборний оффер</h3><p>Структуруємо програму навчання та формуємо оффер. AI перетворює ваші знання на чітку систему.</p><div class="day-pills"><span class="day-pill">NotebookLM</span><span class="day-pill">Gemini</span></div></div></div>
-      <div class="day-row r d3"><div class="day-node"><div class="day-orb">3</div></div><div class="day-body"><p class="day-meta">День третій · Упаковка</p><h3>Сайт за 30 хвилин</h3><p>Генеруємо повноцінний продажний лендінг без коду, підключаємо оплати та автоматизуємо доступ.</p><div class="day-pills"><span class="day-pill">Lovable</span></div></div></div>
-      <div class="day-row r d4"><div class="day-node"><div class="day-orb">4</div></div><div class="day-body"><p class="day-meta">День четвертий · Продажі</p><h3>Контентна воронка та сценарії</h3><p>7-денний план прогріву, тексти постів, email-ланцюжок — весь контент для запуску готовий за день.</p><div class="day-pills"><span class="day-pill">Claude</span></div></div></div>
-      <div class="day-row r"><div class="day-node"><div class="day-orb">5</div></div><div class="day-body"><p class="day-meta">День п'ятий · Трафік</p><h3>Налаштування та запуск реклами</h3><p>Налаштовуємо Facebook Ads, Meta Pixel та аналітику. Запускаємо перший трафік і отримуємо заявки.</p><div class="day-pills"><span class="day-pill">ChatGPT</span><span class="day-pill">Meta Ads</span></div></div></div>
+
+      <div class="day-row r d1">
+        <div class="day-node"><div class="day-orb">1</div></div>
+        <div class="day-body">
+          <p class="day-meta">День перший · Фундамент</p>
+          <h3>Ви чітко знаєте, кому і що продаєте</h3>
+          <p>Ніша — визначена. Результат для клієнта — сформульований. Обіцянка продукту — прописана. Більше немає відчуття «не знаю з чого почати».</p>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Визначена ніша</span>
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Портрет клієнта</span>
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Готова обіцянка продукту</span>
+          </div>
+          <div class="day-pills"><span class="day-pill">Claude</span><span class="day-pill">ChatGPT</span></div>
+        </div>
+      </div>
+
+      <div class="day-row r d2">
+        <div class="day-node"><div class="day-orb">2</div></div>
+        <div class="day-body">
+          <p class="day-meta">День другий · Продукт</p>
+          <h3>У вас є готова структура курсу</h3>
+          <p>Модулі, логіка, домашні завдання, трансформація. AI перетворив ваші знання на систему, яку люди реально проходять до кінця.</p>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Модулі та уроки</span>
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Логіка трансформації</span>
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Оффер і ціна</span>
+          </div>
+          <div class="day-pills"><span class="day-pill">NotebookLM</span><span class="day-pill">Gemini</span></div>
+        </div>
+      </div>
+
+      <div class="day-row r d3">
+        <div class="day-node"><div class="day-orb">3</div></div>
+        <div class="day-body">
+          <p class="day-meta">День третій · Сайт</p>
+          <h3>У вас є продаючий сайт, якого не соромно показати</h3>
+          <p>Не «щось зліплене наспіх» — повноцінна сторінка з підключеними оплатами, готова приймати замовлення. Без розробника, без коду, за 30 хвилин.</p>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Готовий лендінг</span>
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Підключені оплати</span>
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Готовий до трафіку</span>
+          </div>
+          <div class="day-pills"><span class="day-pill">Lovable</span></div>
+        </div>
+      </div>
+
+      <div class="day-row r d4">
+        <div class="day-node"><div class="day-orb">4</div></div>
+        <div class="day-body">
+          <p class="day-meta">День четвертий · Контент</p>
+          <h3>У вас є готовий контент для всього запуску</h3>
+          <p>7 днів прогріву, тексти постів, email-ланцюжок, сценарії для сторіс — весь контент готовий. Вам залишається лише публікувати.</p>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.82rem;color:var(--marsala);">✔ 7 днів прогріву</span>
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Тексти постів</span>
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Email-ланцюжок</span>
+          </div>
+          <div class="day-pills"><span class="day-pill">Claude</span></div>
+        </div>
+      </div>
+
+      <div class="day-row r">
+        <div class="day-node"><div class="day-orb">5</div></div>
+        <div class="day-body">
+          <p class="day-meta">День п'ятий · Запуск</p>
+          <h3>Ви вже отримуєте перші заявки</h3>
+          <p>Перший трафік запущено. Перші ліди в системі. Ви більше не готуєтесь — ви продаєте. Це і є фінал, якого більшість так і не досягають самостійно.</p>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Перший трафік</span>
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Перші ліди</span>
+            <span style="font-size:.82rem;color:var(--marsala);">✔ Готові продавати</span>
+          </div>
+          <div class="day-pills"><span class="day-pill">ChatGPT</span><span class="day-pill">Meta Ads</span></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- TOOLS -->
+<!-- RESULT BLOCK — новий "Що буде через 5 днів" -->
+<section class="solution-sec" style="background:var(--marsala2);padding:80px 0;">
+  <div class="wrap" style="padding-top:0;padding-bottom:0;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1000px;">
+      <div class="r">
+        <p class="s-label" style="color:rgba(232,207,160,.7);">Ваш результат</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:#fff;line-height:1.2;margin-bottom:20px;">
+          Після 5 днів<br>у вас <em style="color:var(--gold3);">буде:</em>
+        </h2>
+        <p style="font-size:1rem;color:rgba(255,255,255,.7);font-weight:300;line-height:1.8;">
+          Не «майже готово». Не «ще трохи доопрацюю».<br>Реальний продукт, реальний сайт, реальні заявки.
+        </p>
+      </div>
+      <div class="r d1">
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;">
+          <li style="display:flex;gap:14px;align-items:flex-start;padding:16px 20px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);">
+            <span style="color:var(--gold3);font-size:1.1rem;flex-shrink:0;">✔</span>
+            <span style="font-size:.95rem;color:#fff;font-weight:300;">Готова структура курсу з модулями і результатами</span>
+          </li>
+          <li style="display:flex;gap:14px;align-items:flex-start;padding:16px 20px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);">
+            <span style="color:var(--gold3);font-size:1.1rem;flex-shrink:0;">✔</span>
+            <span style="font-size:.95rem;color:#fff;font-weight:300;">Продаючий лендінг з підключеними оплатами</span>
+          </li>
+          <li style="display:flex;gap:14px;align-items:flex-start;padding:16px 20px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);">
+            <span style="color:var(--gold3);font-size:1.1rem;flex-shrink:0;">✔</span>
+            <span style="font-size:.95rem;color:#fff;font-weight:300;">Повний контент-план і сценарій прогріву</span>
+          </li>
+          <li style="display:flex;gap:14px;align-items:flex-start;padding:16px 20px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);">
+            <span style="color:var(--gold3);font-size:1.1rem;flex-shrink:0;">✔</span>
+            <span style="font-size:.95rem;color:#fff;font-weight:300;">Перший трафік і готовність приймати заявки</span>
+          </li>
+          <li style="display:flex;gap:14px;align-items:flex-start;padding:16px 20px;border-radius:6px;background:rgba(255,255,255,.08);border:1px solid rgba(232,207,160,.25);">
+            <span style="color:var(--gold3);font-size:1.1rem;flex-shrink:0;">✔</span>
+            <span style="font-size:.95rem;color:var(--gold3);font-weight:400;">Відчуття готовності — яке ви відкладали роками</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS — переосмислено: замінює команду -->
 <section class="tools-sec">
   <div class="wrap">
-    <p class="s-label r">Інструменти</p>
-    <h2 class="s-title r">Ваша AI-команда<br>з <em>чотирьох нейромереж</em></h2>
-    <p class="s-sub r d1">Кожен інструмент — конкретна роль. Разом вони замінюють цілу команду фахівців.</p>
+    <p class="s-label r">Ваша команда</p>
+    <h2 class="s-title r">Вам більше не потрібен<br><em>продюсер, дизайнер і копірайтер</em></h2>
+    <p class="s-sub r d1">Кожен AI-інструмент — конкретна роль. Разом вони замінюють команду, яка коштує $1500+/міс.</p>
     <div class="tools-grid">
-      <div class="tool-card r d1"><span class="tool-glyph">🤖</span><p class="tool-name">ChatGPT</p><p class="tool-desc">Аналіз ринку, генерація ідей, рекламні тексти та сценарії продажів.</p><span class="tool-role">Стратегія · Реклама</span></div>
-      <div class="tool-card r d2"><span class="tool-glyph">💡</span><p class="tool-name">Claude</p><p class="tool-desc">Глибокий аналіз ЦА, методологія курсу, продажні тексти та email-послідовності.</p><span class="tool-role">Методологія · Контент</span></div>
-      <div class="tool-card r d3"><span class="tool-glyph">📚</span><p class="tool-name">NotebookLM</p><p class="tool-desc">Перетворює ваші матеріали на структуровану навчальну програму автоматично.</p><span class="tool-role">Структура курсу</span></div>
-      <div class="tool-card r d4"><span class="tool-glyph">🚀</span><p class="tool-name">Lovable</p><p class="tool-desc">Генерує повноцінний продажний сайт з оплатами за 30 хвилин. Без коду.</p><span class="tool-role">Сайт за 30 хв</span></div>
+      <div class="tool-card r d1">
+        <span class="tool-glyph">🤖</span>
+        <p class="tool-name">ChatGPT</p>
+        <p style="font-size:.8rem;color:var(--marsala);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;font-weight:500;">Ваш стратег</p>
+        <p class="tool-desc">Аналізує ринок, конкурентів і вашу аудиторію. Пише рекламні тексти та сценарії продажів.</p>
+        <div style="margin-top:16px;padding:10px 14px;border-radius:4px;background:rgba(139,32,64,.05);border:1px solid rgba(139,32,64,.1);font-size:.8rem;color:var(--muted);">Команда: $500+ · AI: безкоштовно</div>
+      </div>
+      <div class="tool-card r d2">
+        <span class="tool-glyph">💡</span>
+        <p class="tool-name">Claude</p>
+        <p style="font-size:.8rem;color:var(--marsala);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;font-weight:500;">Ваш методолог</p>
+        <p class="tool-desc">Створює структуру курсу, пише продажні тексти, розробляє email-послідовності та сценарії прогріву.</p>
+        <div style="margin-top:16px;padding:10px 14px;border-radius:4px;background:rgba(139,32,64,.05);border:1px solid rgba(139,32,64,.1);font-size:.8rem;color:var(--muted);">Команда: $700+ · AI: від $0</div>
+      </div>
+      <div class="tool-card r d3">
+        <span class="tool-glyph">📚</span>
+        <p class="tool-name">NotebookLM</p>
+        <p style="font-size:.8rem;color:var(--marsala);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;font-weight:500;">Ваш структуролог</p>
+        <p class="tool-desc">Перетворює ваші матеріали і знання на впорядковану навчальну програму. Автоматично.</p>
+        <div style="margin-top:16px;padding:10px 14px;border-radius:4px;background:rgba(139,32,64,.05);border:1px solid rgba(139,32,64,.1);font-size:.8rem;color:var(--muted);">Команда: $300+ · AI: безкоштовно</div>
+      </div>
+      <div class="tool-card r d4">
+        <span class="tool-glyph">🚀</span>
+        <p class="tool-name">Lovable</p>
+        <p style="font-size:.8rem;color:var(--marsala);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;font-weight:500;">Ваш розробник</p>
+        <p class="tool-desc">Генерує повноцінний продажний сайт з оплатами за 30 хвилин. Без коду. Без розробника.</p>
+        <div style="margin-top:16px;padding:10px 14px;border-radius:4px;background:rgba(139,32,64,.05);border:1px solid rgba(139,32,64,.1);font-size:.8rem;color:var(--muted);">Розробник: $800+ · AI: від $20</div>
+      </div>
+    </div>
+    <div class="r" style="margin-top:48px;padding:28px 36px;border-radius:6px;background:var(--card2);border:1px solid var(--border);max-width:700px;display:flex;align-items:center;gap:24px;">
+      <div style="font-size:2rem;">💰</div>
+      <div>
+        <p style="font-size:1.1rem;font-weight:500;color:var(--ink);margin-bottom:6px;">Команда фахівців = від $1500/міс</p>
+        <p style="font-size:1rem;color:var(--marsala);font-weight:600;">Весь AI-стек = до $50/міс або безкоштовно</p>
+      </div>
     </div>
   </div>
 </section>
@@ -719,11 +951,18 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 <section class="pricing-sec" id="pricing">
   <div class="wrap">
     <p class="s-label r">Тарифи</p>
-    <h2 class="s-title r">Оберіть свій формат</h2>
-    <p class="s-sub r d1">Обидва тарифи дають доступ до повної програми. Різниця — в рівні підтримки.</p>
+    <h2 class="s-title r">Скільки ви <em>втрачаєте,</em><br>відкладаючи запуск?</h2>
+    <div class="r d1" style="max-width:680px;margin-bottom:52px;padding:24px 32px;border-radius:6px;background:rgba(139,32,64,.05);border-left:3px solid var(--marsala);">
+      <p style="font-size:1rem;line-height:1.8;font-weight:300;">
+        1 місяць без продукту = мінус <strong style="color:var(--marsala);">30 000 – 100 000 грн</strong> потенційного доходу.<br>
+        На цьому фоні вартість курсу виглядає як дрібниця.
+      </p>
+    </div>
     <div class="pricing-grid">
       <div class="p-card r d1">
-        <p class="p-tier">Тариф 01</p><p class="p-name">Self-Made</p>
+        <p class="p-tier">Тариф 01</p>
+        <p class="p-name">Self-Made</p>
+        <p style="font-size:.9rem;color:var(--muted);margin-bottom:20px;font-style:italic;">Для тих, хто хоче самостійно і має дисципліну</p>
         <div class="p-price"><span class="p-currency">₴</span><span class="p-amount">349</span></div>
         <p class="p-old">Повна вартість: 999 грн</p>
         <div class="p-line"></div>
@@ -733,29 +972,31 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
           <li><span class="p-check y">✓</span>База промптів 100+</li>
           <li><span class="p-check y">✓</span>Шаблони лендінгів та постів</li>
           <li><span class="p-check y">✓</span>Доступ назавжди + оновлення</li>
-          <li><span class="p-check n">✗</span><span style="color:var(--muted)">Закритий чат з куратором</span></li>
-          <li><span class="p-check n">✗</span><span style="color:var(--muted)">Перевірка оффера та сайту</span></li>
+          <li><span class="p-check y">✓</span>Підійде, якщо ви готові самі приймати рішення</li>
+          <li><span class="p-check n">✗</span><span style="color:var(--muted)">Підтримка куратора</span></li>
         </ul>
         <a href="#order" class="p-btn outline">Обрати Self-Made →</a>
-        <p class="p-guarantee">✦ Повернення коштів 14 днів</p>
+        <p class="p-guarantee">✦ Повернення коштів протягом 14 днів</p>
       </div>
       <div class="p-card featured r d2">
-        <div class="p-badge">✦ Хіт продажів</div>
-        <p class="p-tier">Тариф 02</p><p class="p-name">AI-Support</p>
+        <div class="p-badge">✦ Рекомендуємо</div>
+        <p class="p-tier">Тариф 02</p>
+        <p class="p-name">AI-Support</p>
+        <p style="font-size:.9rem;color:var(--marsala);margin-bottom:20px;font-style:italic;">Для тих, хто хоче запуститись і не зупинитись на півдорозі</p>
         <div class="p-price"><span class="p-currency">₴</span><span class="p-amount">1500</span></div>
         <p class="p-old">Повна вартість: 2999 грн</p>
         <div class="p-line"></div>
         <ul class="p-feats">
           <li><span class="p-check y">✓</span>Все з тарифу Self-Made</li>
-          <li><span class="p-check y">✓</span>Закритий чат з підтримкою куратора</li>
-          <li><span class="p-check y">✓</span>Перевірка вашого оффера</li>
-          <li><span class="p-check y">✓</span>Аудит структури сайту</li>
-          <li><span class="p-check y">✓</span>Підтримка 5 днів запуску</li>
+          <li><span class="p-check y">✓</span>Перевірка вашого оффера куратором</li>
+          <li><span class="p-check y">✓</span>Зворотний зв'язок на лендінг</li>
+          <li><span class="p-check y">✓</span>Підтримка в процесі 5 днів запуску</li>
           <li><span class="p-check y">✓</span>2 групові Q&amp;A сесії</li>
           <li><span class="p-check y">✓</span>Закрита спільнота</li>
+          <li><span class="p-check y">✓</span>Щоб ви реально дійшли до результату</li>
         </ul>
-        <a href="#order" class="p-btn main">Зайняти місце →</a>
-        <p class="p-guarantee">✦ Повернення коштів 14 днів</p>
+        <a href="#order" class="p-btn main">🔥 Запуститись з підтримкою →</a>
+        <p class="p-guarantee">✦ Повернення коштів протягом 14 днів</p>
       </div>
     </div>
   </div>
@@ -769,40 +1010,65 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
       <div class="r"><div class="author-frame">👤</div></div>
       <div class="r d1">
         <h2 class="author-name">[Ваше ім'я]</h2>
-        <p class="author-role">AI-підприємець · Творець онлайн-продуктів</p>
-        <p class="author-bio">[Ваша коротка біографія: досвід в AI та інфобізнесі, результати студентів, чому вам варто довіряти — 3-4 особисті речення.]</p>
+        <p class="author-role">AI-підприємець · Продюсер онлайн-курсів</p>
+        <p class="author-bio">
+          [Ваша особиста історія: чому ви проти залежності від дорогих продюсерів, скільки запусків зробили, які результати студентів. Люди купують у людини — зробіть цей блок живим і справжнім, 3–4 речення від першої особи.]
+        </p>
         <div class="author-nums">
           <div><p class="a-n-val">[X]+</p><p class="a-n-lab">Запущених продуктів</p></div>
           <div><p class="a-n-val">[Y]+</p><p class="a-n-lab">Учнів навчено</p></div>
-          <div><p class="a-n-val">[Z]</p><p class="a-n-lab">Роки в AI &amp; EdTech</p></div>
+          <div><p class="a-n-val">[Z] р.</p><p class="a-n-lab">В AI &amp; EdTech</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ — розширено -->
 <section class="faq-sec">
   <div class="wrap">
     <p class="s-label r">FAQ</p>
-    <h2 class="s-title r">Питання та <em>відповіді</em></h2>
+    <h2 class="s-title r">Відповіді на <em>справжні сумніви</em></h2>
     <div class="faq-list">
-      <div class="faq-item r d1"><button class="faq-q"><span>Чи підійде мені, якщо я не розбираюсь в техніці?</span><span class="faq-icon">+</span></button><div class="faq-ans"><div class="faq-ans-inner">Так! AI зробить 90% технічної роботи за вас. Lovable генерує сайт без жодного рядка коду. ChatGPT та Claude пишуть тексти. Від вас потрібна лише ваша експертиза.</div></div></div>
-      <div class="faq-item r d2"><button class="faq-q"><span>Скільки часу на день потрібно виділяти?</span><span class="faq-icon">+</span></button><div class="faq-ans"><div class="faq-ans-inner">1.5–2 години інтенсивної роботи на день. Завдяки AI більшість завдань, які раніше займали дні, тепер займають годину. За 5 днів — готовий продукт.</div></div></div>
-      <div class="faq-item r d3"><button class="faq-q"><span>Чи потрібні платні підписки на AI?</span><span class="faq-icon">+</span></button><div class="faq-ans"><div class="faq-ans-inner">Ні. Ми покажемо, як пройти весь процес на безкоштовних версіях. Платні тарифи — опційні і не обов'язкові для першого запуску.</div></div></div>
-      <div class="faq-item r d4"><button class="faq-q"><span>Чи підійде для будь-якої ніші?</span><span class="faq-icon">+</span></button><div class="faq-ans"><div class="faq-ans-inner">Так. Система працює для коучів, психологів, дизайнерів, фітнес-тренерів, маркетологів та будь-якого іншого фахівця з власною експертизою.</div></div></div>
-      <div class="faq-item r"><button class="faq-q"><span>Коли стартує наступний потік?</span><span class="faq-icon">+</span></button><div class="faq-ans"><div class="faq-ans-inner">Доступ до матеріалів — миттєвий після оплати. Дати Q&A сесій надсилаємо після реєстрації.</div></div></div>
+      <div class="faq-item r d1">
+        <button class="faq-q"><span>Я не технічна людина — мені підійде?</span><span class="faq-icon">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner">Саме для вас і зроблено. Lovable генерує сайт без жодного рядка коду. AI пише тексти. Ви лише відповідаєте на запитання і приймаєте рішення. 90% технічної роботи зникає.</div></div>
+      </div>
+      <div class="faq-item r d2">
+        <button class="faq-q"><span>А якщо у мене маленька аудиторія?</span><span class="faq-icon">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner">Навіть 300–500 підписників достатньо для першого запуску. Ми покажемо, як зібрати перші продажі з наявної аудиторії та паралельно нарощувати нову через рекламу від $3/день.</div></div>
+      </div>
+      <div class="faq-item r d3">
+        <button class="faq-q"><span>А якщо я боюся, що курс не куплять?</span><span class="faq-icon">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner">Страх «не куплять» — це страх невидимості, а не якості. Ми починаємо з аналізу реального попиту, щоб ви знали ще до запуску: ваш продукт потрібен. І вчимо збирати передоплати ще до того, як курс готовий.</div></div>
+      </div>
+      <div class="faq-item r d4">
+        <button class="faq-q"><span>Скільки часу на день потрібно?</span><span class="faq-icon">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner">1.5–2 години на день. Завдяки AI більшість завдань, які раніше займали тиждень, виконуються за годину. Якщо є хоч один вільний вечір — ви справитесь.</div></div>
+      </div>
+      <div class="faq-item r">
+        <button class="faq-q"><span>Чи потрібні платні підписки на AI?</span><span class="faq-icon">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner">Ні. Ми покажемо, як пройти весь процес на безкоштовних версіях. Платні тарифи дають більше зручності, але не є обов'язковими для першого запуску.</div></div>
+      </div>
+      <div class="faq-item r">
+        <button class="faq-q"><span>Чи підійде для будь-якої ніші?</span><span class="faq-icon">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner">Так. Коучинг, психологія, дизайн, фітнес, маркетинг, юриспруденція, фінанси — будь-яка ніша, де є ваша експертиза. Головне — щоб ви хотіли її передати іншим.</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- URGENCY + FINAL CTA -->
 <section class="cta-sec" id="order">
   <div class="cta-inner">
-    <div class="cta-scarcity">Залишилось місць: 12 з 50</div>
-    <h2>Готові <em>запустити</em><br>свій продукт?</h2>
-    <p>Ваша експертиза коштує набагато більше, ніж ви отримуєте зараз. AI прибрав усі технічні бар'єри. Залишилось зробити один крок.</p>
-    <a href="#pricing" class="btn-cta-white">Зайняти місце на курсі</a>
+    <div class="cta-scarcity" id="timerBlock">⏳ До підвищення ціни залишилось: <span id="countdown" style="font-weight:700;color:var(--gold3);">00:00:00</span></div>
+    <h2>Ви можете ще<br><em>6 місяців готуватись.</em></h2>
+    <p style="font-size:1.15rem;">
+      А можете через 5 днів вже мати продукт, сайт і перші заявки.<br>
+      <strong style="color:var(--gold3);">Різниця — в рішенні сьогодні.</strong>
+    </p>
+    <a href="#pricing" class="btn-cta-white">🔥 Я запускаюсь самостійно</a>
+    <p style="margin-top:20px;font-size:.85rem;color:rgba(255,255,255,.5);">Залишилось 12 місць з 50 · Гарантія повернення 14 днів</p>
   </div>
 </section>
 
@@ -810,7 +1076,11 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 <footer>
   <div class="footer-inner">
     <div class="f-logo"><em>AI</em>-Запуск</div>
-    <div class="f-links"><a href="mailto:[email]">[email]</a><a href="#">Telegram</a><a href="#">Політика конфіденційності</a></div>
+    <div class="f-links">
+      <a href="mailto:[email]">[email]</a>
+      <a href="#">Telegram</a>
+      <a href="#">Політика конфіденційності</a>
+    </div>
   </div>
   <div class="f-copy">© 2026 AI-Запуск. Всі права захищені.</div>
 </footer>
@@ -886,10 +1156,10 @@ document.querySelectorAll('a,button').forEach(el=>{
   const el=document.getElementById('tw-text');
   if(!el)return;
   const lines=[
-    'За 5 днів. За допомогою AI.',
-    'Без команди та великих бюджетів.',
-    'Поки інші тільки пишуть плани.',
-    'GPT + Claude + Lovable + NotebookLM.'
+    'AI зробить 90% роботи за вас.',
+    'Без команди. Без $1000+ бюджету.',
+    'Ви відкладали рік — запустіться за 5 днів.',
+    'Структура, сайт, воронка — все за тиждень.'
   ];
   let li=0,ci=0,deleting=false,pause=0;
   function tick(){
@@ -906,6 +1176,29 @@ document.querySelectorAll('a,button').forEach(el=>{
     }
   }
   setTimeout(tick,1200);
+})();
+
+/* ── COUNTDOWN TIMER ── */
+(function(){
+  const el=document.getElementById('countdown');
+  if(!el)return;
+  // Дедлайн — 48 годин від першого відвідування (або фіксована дата)
+  const KEY='ailaunch_deadline';
+  let deadline=localStorage.getItem(KEY);
+  if(!deadline){
+    deadline=Date.now()+48*60*60*1000;
+    localStorage.setItem(KEY,deadline);
+  }
+  function update(){
+    const diff=+deadline-Date.now();
+    if(diff<=0){el.textContent='00:00:00';return;}
+    const h=Math.floor(diff/3600000);
+    const m=Math.floor((diff%3600000)/60000);
+    const s=Math.floor((diff%60000)/1000);
+    el.textContent=[h,m,s].map(n=>String(n).padStart(2,'0')).join(':');
+    setTimeout(update,1000);
+  }
+  update();
 })();
 
 /* ── COUNTER ANIMATION ── */
@@ -950,6 +1243,18 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
   });
 });
+
+/* ── STICKY CTA ── */
+(function(){
+  const bar=document.createElement('div');
+  bar.className='sticky-cta';
+  bar.innerHTML='<p class="sticky-cta-text">Відкладаєте вже давно? <strong>Запустіться за 5 днів.</strong></p><a href="#pricing" class="sticky-cta-btn">🔥 Зайняти місце</a>';
+  document.body.appendChild(bar);
+  window.addEventListener('scroll',()=>{
+    if(window.scrollY>400)bar.classList.add('visible');
+    else bar.classList.remove('visible');
+  });
+})();
 </script>
 </body>
 </html>
