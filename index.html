@@ -604,7 +604,125 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 .sticky-cta-text strong{color:var(--marsala);}
 .sticky-cta-btn{padding:12px 28px;border-radius:2px;background:linear-gradient(135deg,var(--marsala2),var(--marsala),var(--gold2));color:#fff;font-weight:600;font-size:.825rem;text-decoration:none;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;transition:all .3s;box-shadow:0 0 20px var(--glow-m);}
 .sticky-cta-btn:hover{transform:translateY(-1px);box-shadow:0 4px 24px var(--glow-m);}
+
+/* ═══════ FOR WHOM ═══════ */
+.forwho-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px;max-width:800px;}
+.forwho-yes,.forwho-no{padding:32px;border-radius:8px;}
+.forwho-yes{background:var(--card);border:1px solid var(--border);box-shadow:0 2px 16px rgba(139,32,64,.04);}
+.forwho-no{background:rgba(139,32,64,.03);border:1px solid rgba(139,32,64,.09);}
+.forwho-label{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px;}
+.forwho-label-yes{color:var(--marsala);}
+.forwho-label-no{color:var(--muted);}
+.forwho-item{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--border);font-size:.95rem;font-weight:300;line-height:1.5;}
+.forwho-item:last-child{border-bottom:none;padding-bottom:0;}
+.fi-yes{color:var(--marsala);font-size:1rem;flex-shrink:0;}
+.fi-no{color:var(--muted);flex-shrink:0;}
+.fi-muted{color:var(--muted);}
+
+/* ═══════ RESULT LIST ═══════ */
+.result-list{display:flex;flex-direction:column;gap:12px;}
+.result-item{display:flex;gap:16px;align-items:center;padding:16px 22px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);font-size:1rem;color:#fff;font-weight:300;transition:background .3s;}
+.result-item:hover{background:rgba(255,255,255,.1);}
+.ri-check{color:var(--gold3);font-size:1.1rem;flex-shrink:0;}
+.result-item-gold{background:rgba(255,255,255,.1);border-color:rgba(232,207,160,.3);font-weight:500;}
+.result-item-gold span:last-child{color:var(--gold3);}
+.ri-gold{color:var(--gold2);}
+
+/* ═══════ MOBILE ═══════ */
+.mobile-hide{display:inline-flex;}
+
+@media(max-width:600px){
+  /* NAV */
+  nav{padding:14px 18px;}
+  .nav-logo{font-size:1.1rem;}
+  .nav-cta{padding:9px 14px;font-size:.72rem;letter-spacing:.03em;max-width:160px;line-height:1.3;}
+
+  /* HERO */
+  .hero{padding:96px 20px 56px;min-height:auto;}
+  .hero h1{font-size:2.15rem;line-height:1.1;letter-spacing:-.01em;margin-bottom:18px;}
+  .hero-typewriter{font-size:1rem;min-height:1.5rem;margin-bottom:18px;}
+  .hero-sub{font-size:.95rem;margin-bottom:28px;padding:0;}
+  .hero-cta-row{flex-direction:column;gap:10px;}
+  .btn-main{padding:17px 20px;font-size:.85rem;text-align:center;justify-content:center;border-radius:4px;letter-spacing:.05em;}
+  .mobile-hide{display:none!important;}
+  .hero-trust{gap:14px;margin-top:32px;padding-top:24px;}
+  .trust-item{font-size:.75rem;}
+
+  /* STATS */
+  .stats-inner{gap:20px 16px;padding:0 20px;justify-content:space-between;}
+  .stat-val{font-size:2rem;}
+  .stat-lab{font-size:.6rem;}
+  .stats-bar > div:last-child{display:none;}/* ховаємо чіпи на мобільному */
+
+  /* PAIN */
+  .pain-sec .wrap,.solution-sec .wrap,.roadmap-sec .wrap,.tools-sec .wrap{padding:56px 20px;}
+  .pain-pull{font-size:1.75rem;}
+  .pain-header{gap:28px;margin-bottom:40px;}
+  .pain-card{padding:26px 20px;}
+  .pain-card h3{font-size:1.15rem;}
+
+  /* BURNOUT */
+  .solution-sec .wrap > .r > div[style]{flex-direction:column;}
+
+  /* FOR WHOM */
+  .forwho-grid{grid-template-columns:1fr;gap:16px;margin-top:28px;}
+  .forwho-yes,.forwho-no{padding:24px 20px;}
+  .forwho-item{font-size:.9rem;}
+
+  /* ROADMAP */
+  .roadmap-list::before{left:34px;}
+  .day-row{grid-template-columns:70px 1fr;padding-bottom:28px;}
+  .day-orb{width:28px;height:28px;font-size:.85rem;}
+  .day-body h3{font-size:1.1rem;line-height:1.3;}
+  .day-meta{font-size:.65rem;}
+
+  /* RESULT */
+  .result-item{padding:14px 16px;font-size:.9rem;}
+
+  /* TOOLS */
+  .tools-grid{grid-template-columns:1fr;gap:16px;}
+  .tool-card{padding:28px 22px;}
+
+  /* PRICING */
+  .pricing-sec .wrap{padding:56px 20px;}
+  .pricing-grid{grid-template-columns:1fr!important;max-width:100%;}
+  .p-card{padding:36px 24px;}
+  .p-amount{font-size:3rem;}
+  .pricing-grid > .r.d1 .p-btn.outline{display:none;}/* ховаємо слабкий тариф CTA на мобільному */
+
+  /* AUTHOR */
+  .author-sec .wrap{padding:56px 20px;}
+  .author-grid{grid-template-columns:1fr!important;gap:24px;}
+  .author-frame{width:140px;height:180px;font-size:56px;}
+  .author-name{font-size:1.75rem;}
+
+  /* FAQ */
+  .faq-sec .wrap{padding:56px 20px;}
+  .faq-q{padding:18px 18px;font-size:.95rem;}
+  .faq-ans-inner{padding:0 18px 18px;font-size:.875rem;}
+
+  /* CTA */
+  .cta-sec{padding:72px 20px;}
+  .cta-inner h2{font-size:2.2rem;}
+  .btn-cta-white{padding:18px 28px;font-size:.875rem;width:100%;justify-content:center;text-align:center;}
+
+  /* STICKY */
+  .sticky-cta{padding:10px 16px;gap:8px;}
+  .sticky-cta-text{font-size:.8rem;}
+  .sticky-cta-btn{padding:9px 16px;font-size:.75rem;}
+}
 </style>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1323895059547773');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1323895059547773&ev=PageView&noscript=1"/></noscript>
 </head>
 <body>
 
@@ -624,9 +742,9 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
   <canvas id="neural"></canvas>
 
   <div class="hero-inner">
-    <div class="hero-tag"><span class="dot"></span>Вже 500+ експертів запустились. Наступний — ви.</div>
+    <div class="start-badge r">📅 Старт навчання — <strong>28 лютого</strong></div>
 
-    <h1>Запустіть свій курс<br>за <em>5 днів</em> — без команди,<br>технічного «пекла» і прокрастинації</h1>
+    <h1>Запустіть курс<br>за <em>5 днів</em><br>— без команди<br>і прокрастинації</h1>
 
     <div class="hero-typewriter">
       <span id="tw-text"></span><span class="tw-cursor"></span>
@@ -639,7 +757,7 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 
     <div class="hero-cta-row">
       <a href="#pricing" class="btn-main">🔥 Хочу запуститись за 5 днів</a>
-      <a href="#program" class="btn-ghost">Як це працює ↓</a>
+      <a href="#program" class="btn-ghost mobile-hide">Як це працює ↓</a>
     </div>
 
     <p style="margin-top:16px;font-size:.85rem;color:var(--muted);animation:fadeUp .8s .5s ease both;opacity:0;">
@@ -658,10 +776,6 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 <!-- STATS BAR — переосмислено як "зняття страху" -->
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat-block">
-      <div class="stat-val" data-count="500">0</div>
-      <div class="stat-lab">Експертів вже запустили</div>
-    </div>
     <div class="stat-block">
       <div class="stat-val" data-count="5">0</div>
       <div class="stat-lab">Днів від ідеї до лендінгу</div>
@@ -730,68 +844,59 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
   </div>
 </section>
 
-<!-- BURNOUT — новий блок про вигорання -->
+<!-- BURNOUT -->
 <section class="solution-sec">
   <div class="wrap">
-    <div class="solution-frame r">
-      <p class="s-label">Важливо знати</p>
-      <h2>Ви не лінуєтесь.<br>Ви перевантажені <em>хаосом рішень.</em></h2>
-      <p>
-        Експерти вигоряють не через роботу — вони вигоряють через нескінченний список «що зробити спочатку». Курс чи марафон? Яка платформа? Як писати прогрів? Скільки коштує?
-        <br><br>
-        AI-Запуск — це <strong style="color:var(--marsala);">не ще один курс про AI.</strong> Це чітка структура на 5 днів, де кожне рішення вже прийнято за вас. Ви просто рухаєтесь вперед.
+    <div class="r" style="max-width:680px;">
+      <p class="s-label">Важливо</p>
+      <h2 class="s-title">Ви не лінуєтесь.<br>Ви перевантажені <em>хаосом рішень.</em></h2>
+      <p style="font-size:1rem;color:var(--muted);line-height:1.7;margin-bottom:32px;font-weight:300;">
+        AI-Запуск — це не курс про AI. Це 5 днів, де кожне рішення вже прийнято за вас.
       </p>
-      <div class="solution-chip">Структура = спокій. Спокій = дія. Дія = запуск.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <span style="padding:14px 20px;border-radius:6px;background:var(--card2);border:1px solid var(--border);font-size:.95rem;color:var(--ink);">📌 Структура → спокій</span>
+        <span style="padding:14px 20px;border-radius:6px;background:var(--card2);border:1px solid var(--border);font-size:.95rem;color:var(--ink);">🎯 Спокій → дія</span>
+        <span style="padding:14px 20px;border-radius:6px;background:rgba(139,32,64,.07);border:1px solid rgba(139,32,64,.2);font-size:.95rem;font-weight:600;color:var(--marsala);">🚀 Дія → запуск</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FOR WHOM — новий блок -->
-<section class="roadmap-sec" style="background:var(--cream);">
+<!-- FOR WHOM -->
+<section style="background:var(--cream2);">
   <div class="wrap">
     <p class="s-label r">Для кого</p>
-    <h2 class="s-title r">Цей курс — <em>для вас,</em> якщо...</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;max-width:860px;">
-      <div class="r d1" style="padding:36px;border-radius:6px;background:var(--card);border:1px solid var(--border);box-shadow:0 2px 16px rgba(139,32,64,.04);">
-        <p style="font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--marsala);margin-bottom:20px;">✦ Підійде вам</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:14px;">
-          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;"><span style="color:var(--marsala);flex-shrink:0;margin-top:2px;">✓</span>Ви експерт і хочете перейти на новий рівень доходу</li>
-          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;"><span style="color:var(--marsala);flex-shrink:0;margin-top:2px;">✓</span>Є аудиторія, але немає системного продукту</li>
-          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;"><span style="color:var(--marsala);flex-shrink:0;margin-top:2px;">✓</span>Вже запускали, але без структури і результату</li>
-          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;"><span style="color:var(--marsala);flex-shrink:0;margin-top:2px;">✓</span>Боїтесь технічної частини</li>
-          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;"><span style="color:var(--marsala);flex-shrink:0;margin-top:2px;">✓</span>Відкладаєте запуск більше 3 місяців</li>
-        </ul>
+    <h2 class="s-title r">Цей курс — <em>для вас</em></h2>
+    <div class="forwho-grid r d1">
+      <div class="forwho-yes">
+        <p class="forwho-label forwho-label-yes">✦ Підійде</p>
+        <div class="forwho-item"><span class="fi-yes">✓</span><span>Ви експерт і хочете новий рівень доходу</span></div>
+        <div class="forwho-item"><span class="fi-yes">✓</span><span>Є аудиторія, але немає продукту</span></div>
+        <div class="forwho-item"><span class="fi-yes">✓</span><span>Боїтесь технічної частини</span></div>
+        <div class="forwho-item"><span class="fi-yes">✓</span><span>Відкладаєте запуск 3+ місяці</span></div>
       </div>
-      <div class="r d2" style="padding:36px;border-radius:6px;background:rgba(139,32,64,.03);border:1px solid rgba(139,32,64,.1);">
-        <p style="font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;">✕ Не підійде</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:14px;">
-          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;color:var(--muted);"><span style="flex-shrink:0;margin-top:2px;">✕</span>Хто хоче «просто погратися з AI» без мети</li>
-          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;color:var(--muted);"><span style="flex-shrink:0;margin-top:2px;">✕</span>Хто чекає чарівну кнопку без жодних дій</li>
-          <li style="display:flex;gap:12px;font-size:.95rem;font-weight:300;color:var(--muted);"><span style="flex-shrink:0;margin-top:2px;">✕</span>Хто не готовий виділяти 1.5–2 год на день</li>
-        </ul>
+      <div class="forwho-no">
+        <p class="forwho-label forwho-label-no">✕ Не підійде</p>
+        <div class="forwho-item fi-muted"><span class="fi-no">✕</span><span>Хто хоче «пограти з AI» без мети</span></div>
+        <div class="forwho-item fi-muted"><span class="fi-no">✕</span><span>Хто чекає кнопку без дій</span></div>
+        <div class="forwho-item fi-muted"><span class="fi-no">✕</span><span>Хто не може виділити 1.5 год/день</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ROADMAP — переписано через результат -->
+<!-- ROADMAP -->
 <section class="roadmap-sec" id="program">
   <div class="wrap">
     <p class="s-label r">Програма</p>
-    <h2 class="s-title r">Що у вас буде<br>після кожного <em>дня</em></h2>
+    <h2 class="s-title r">5 днів — 5 <em>конкретних результатів</em></h2>
     <div class="roadmap-list">
 
       <div class="day-row r d1">
         <div class="day-node"><div class="day-orb">1</div></div>
         <div class="day-body">
-          <p class="day-meta">День перший · Фундамент</p>
-          <h3>Ви чітко знаєте, кому і що продаєте</h3>
-          <p>Ніша — визначена. Результат для клієнта — сформульований. Обіцянка продукту — прописана. Більше немає відчуття «не знаю з чого почати».</p>
-          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Визначена ніша</span>
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Портрет клієнта</span>
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Готова обіцянка продукту</span>
-          </div>
+          <p class="day-meta">День 1 · Фундамент</p>
+          <h3>Ви знаєте, кому і що продаєте</h3>
           <div class="day-pills"><span class="day-pill">Claude</span><span class="day-pill">ChatGPT</span></div>
         </div>
       </div>
@@ -799,14 +904,8 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
       <div class="day-row r d2">
         <div class="day-node"><div class="day-orb">2</div></div>
         <div class="day-body">
-          <p class="day-meta">День другий · Продукт</p>
-          <h3>У вас є готова структура курсу</h3>
-          <p>Модулі, логіка, домашні завдання, трансформація. AI перетворив ваші знання на систему, яку люди реально проходять до кінця.</p>
-          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Модулі та уроки</span>
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Логіка трансформації</span>
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Оффер і ціна</span>
-          </div>
+          <p class="day-meta">День 2 · Продукт</p>
+          <h3>Готова структура курсу з модулями</h3>
           <div class="day-pills"><span class="day-pill">NotebookLM</span><span class="day-pill">Gemini</span></div>
         </div>
       </div>
@@ -814,29 +913,17 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
       <div class="day-row r d3">
         <div class="day-node"><div class="day-orb">3</div></div>
         <div class="day-body">
-          <p class="day-meta">День третій · Сайт</p>
-          <h3>У вас є продаючий сайт, якого не соромно показати</h3>
-          <p>Не «щось зліплене наспіх» — повноцінна сторінка з підключеними оплатами, готова приймати замовлення. Без розробника, без коду, за 30 хвилин.</p>
-          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Готовий лендінг</span>
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Підключені оплати</span>
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Готовий до трафіку</span>
-          </div>
-          <div class="day-pills"><span class="day-pill">Lovable</span></div>
+          <p class="day-meta">День 3 · Сайт</p>
+          <h3>Продаючий лендінг з оплатами — за 30 хв</h3>
+          <div class="day-pills"><span class="day-pill">Lovable</span><span class="day-pill">Claude</span><span class="day-pill">GitHub</span></div>
         </div>
       </div>
 
       <div class="day-row r d4">
         <div class="day-node"><div class="day-orb">4</div></div>
         <div class="day-body">
-          <p class="day-meta">День четвертий · Контент</p>
-          <h3>У вас є готовий контент для всього запуску</h3>
-          <p>7 днів прогріву, тексти постів, email-ланцюжок, сценарії для сторіс — весь контент готовий. Вам залишається лише публікувати.</p>
-          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="font-size:.82rem;color:var(--marsala);">✔ 7 днів прогріву</span>
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Тексти постів</span>
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Email-ланцюжок</span>
-          </div>
+          <p class="day-meta">День 4 · Контент</p>
+          <h3>Прогрів, пости, тексти для воронок та креативів</h3>
           <div class="day-pills"><span class="day-pill">Claude</span></div>
         </div>
       </div>
@@ -844,14 +931,8 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
       <div class="day-row r">
         <div class="day-node"><div class="day-orb">5</div></div>
         <div class="day-body">
-          <p class="day-meta">День п'ятий · Запуск</p>
-          <h3>Ви вже отримуєте перші заявки</h3>
-          <p>Перший трафік запущено. Перші ліди в системі. Ви більше не готуєтесь — ви продаєте. Це і є фінал, якого більшість так і не досягають самостійно.</p>
-          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Перший трафік</span>
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Перші ліди</span>
-            <span style="font-size:.82rem;color:var(--marsala);">✔ Готові продавати</span>
-          </div>
+          <p class="day-meta">День 5 · Запуск</p>
+          <h3>Покроковий запуск реклами</h3>
           <div class="day-pills"><span class="day-pill">ChatGPT</span><span class="day-pill">Meta Ads</span></div>
         </div>
       </div>
@@ -860,42 +941,33 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
   </div>
 </section>
 
-<!-- RESULT BLOCK — новий "Що буде через 5 днів" -->
-<section class="solution-sec" style="background:var(--marsala2);padding:80px 0;">
-  <div class="wrap" style="padding-top:0;padding-bottom:0;">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1000px;">
-      <div class="r">
-        <p class="s-label" style="color:rgba(232,207,160,.7);">Ваш результат</p>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:#fff;line-height:1.2;margin-bottom:20px;">
-          Після 5 днів<br>у вас <em style="color:var(--gold3);">буде:</em>
-        </h2>
-        <p style="font-size:1rem;color:rgba(255,255,255,.7);font-weight:300;line-height:1.8;">
-          Не «майже готово». Не «ще трохи доопрацюю».<br>Реальний продукт, реальний сайт, реальні заявки.
-        </p>
+<!-- RESULT BLOCK -->
+<section style="background:var(--marsala2);padding:72px 0;">
+  <div class="wrap" style="padding-top:0;padding-bottom:0;max-width:760px;">
+    <p class="s-label r" style="color:rgba(232,207,160,.7);">Ваш результат</p>
+    <h2 class="r" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;color:#fff;line-height:1.1;margin-bottom:32px;">
+      Через 5 днів<br>у вас <em style="color:var(--gold3);">буде:</em>
+    </h2>
+    <div class="result-list r d1">
+      <div class="result-item">
+        <span class="ri-check">✔</span>
+        <span>Структура курсу з модулями і результатами</span>
       </div>
-      <div class="r d1">
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;">
-          <li style="display:flex;gap:14px;align-items:flex-start;padding:16px 20px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);">
-            <span style="color:var(--gold3);font-size:1.1rem;flex-shrink:0;">✔</span>
-            <span style="font-size:.95rem;color:#fff;font-weight:300;">Готова структура курсу з модулями і результатами</span>
-          </li>
-          <li style="display:flex;gap:14px;align-items:flex-start;padding:16px 20px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);">
-            <span style="color:var(--gold3);font-size:1.1rem;flex-shrink:0;">✔</span>
-            <span style="font-size:.95rem;color:#fff;font-weight:300;">Продаючий лендінг з підключеними оплатами</span>
-          </li>
-          <li style="display:flex;gap:14px;align-items:flex-start;padding:16px 20px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);">
-            <span style="color:var(--gold3);font-size:1.1rem;flex-shrink:0;">✔</span>
-            <span style="font-size:.95rem;color:#fff;font-weight:300;">Повний контент-план і сценарій прогріву</span>
-          </li>
-          <li style="display:flex;gap:14px;align-items:flex-start;padding:16px 20px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);">
-            <span style="color:var(--gold3);font-size:1.1rem;flex-shrink:0;">✔</span>
-            <span style="font-size:.95rem;color:#fff;font-weight:300;">Перший трафік і готовність приймати заявки</span>
-          </li>
-          <li style="display:flex;gap:14px;align-items:flex-start;padding:16px 20px;border-radius:6px;background:rgba(255,255,255,.08);border:1px solid rgba(232,207,160,.25);">
-            <span style="color:var(--gold3);font-size:1.1rem;flex-shrink:0;">✔</span>
-            <span style="font-size:.95rem;color:var(--gold3);font-weight:400;">Відчуття готовності — яке ви відкладали роками</span>
-          </li>
-        </ul>
+      <div class="result-item">
+        <span class="ri-check">✔</span>
+        <span>Продаючий лендінг з підключеними оплатами</span>
+      </div>
+      <div class="result-item">
+        <span class="ri-check">✔</span>
+        <span>Контент-план і сценарій прогріву</span>
+      </div>
+      <div class="result-item">
+        <span class="ri-check">✔</span>
+        <span>Перший трафік і перші заявки</span>
+      </div>
+      <div class="result-item result-item-gold">
+        <span class="ri-check ri-gold">✔</span>
+        <span>Відчуття готовності — яке ви відкладали роками</span>
       </div>
     </div>
   </div>
@@ -905,7 +977,7 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 <section class="tools-sec">
   <div class="wrap">
     <p class="s-label r">Ваша команда</p>
-    <h2 class="s-title r">Вам більше не потрібен<br><em>продюсер, дизайнер і копірайтер</em></h2>
+    <h2 class="s-title r">Вам більше не потрібен<br><em>маркетолог, дизайнер і копірайтер</em></h2>
     <p class="s-sub r d1">Кожен AI-інструмент — конкретна роль. Разом вони замінюють команду, яка коштує $1500+/міс.</p>
     <div class="tools-grid">
       <div class="tool-card r d1">
@@ -969,13 +1041,13 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
         <ul class="p-feats">
           <li><span class="p-check y">✓</span>Всі відео-уроки (5 днів)</li>
           <li><span class="p-check y">✓</span>Покрокові інструкції по кожному AI</li>
-          <li><span class="p-check y">✓</span>База промптів 100+</li>
+          <li><span class="p-check y">✓</span>База промптів</li>
           <li><span class="p-check y">✓</span>Шаблони лендінгів та постів</li>
           <li><span class="p-check y">✓</span>Доступ назавжди + оновлення</li>
           <li><span class="p-check y">✓</span>Підійде, якщо ви готові самі приймати рішення</li>
           <li><span class="p-check n">✗</span><span style="color:var(--muted)">Підтримка куратора</span></li>
         </ul>
-        <a href="#order" class="p-btn outline">Обрати Self-Made →</a>
+        <a href="https://secure.wayforpay.com/button/b35ed70a63688" target="_blank" class="p-btn outline" onclick="fbq('track','InitiateCheckout',{content_name:'Self-Made',value:349,currency:'UAH'})">Обрати Self-Made →</a>
         <p class="p-guarantee">✦ Повернення коштів протягом 14 днів</p>
       </div>
       <div class="p-card featured r d2">
@@ -990,12 +1062,10 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
           <li><span class="p-check y">✓</span>Все з тарифу Self-Made</li>
           <li><span class="p-check y">✓</span>Перевірка вашого оффера куратором</li>
           <li><span class="p-check y">✓</span>Зворотний зв'язок на лендінг</li>
-          <li><span class="p-check y">✓</span>Підтримка в процесі 5 днів запуску</li>
-          <li><span class="p-check y">✓</span>2 групові Q&amp;A сесії</li>
-          <li><span class="p-check y">✓</span>Закрита спільнота</li>
-          <li><span class="p-check y">✓</span>Щоб ви реально дійшли до результату</li>
+          <li><span class="p-check y">✓</span>Підтримка в чаті навчання</li>
+          <li><span class="p-check y">✓</span>Зворотний зв'язок протягом 5 днів запуску</li>
         </ul>
-        <a href="#order" class="p-btn main">🔥 Запуститись з підтримкою →</a>
+        <a href="https://secure.wayforpay.com/button/b27978a44ac91" target="_blank" class="p-btn main" onclick="fbq('track','InitiateCheckout',{content_name:'AI-Support',value:1500,currency:'UAH'})">🔥 Запуститись з підтримкою →</a>
         <p class="p-guarantee">✦ Повернення коштів протягом 14 днів</p>
       </div>
     </div>
@@ -1007,17 +1077,17 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
   <div class="wrap">
     <p class="s-label r">Про автора</p>
     <div class="author-grid">
-      <div class="r"><div class="author-frame">👤</div></div>
+      <div class="r"><div class="author-frame"><img src="IMG_4297.PNG" alt="Дарія Садова" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:6px;"></div></div>
       <div class="r d1">
-        <h2 class="author-name">[Ваше ім'я]</h2>
-        <p class="author-role">AI-підприємець · Продюсер онлайн-курсів</p>
+        <h2 class="author-name">Дарія Садова</h2>
+        <p class="author-role">7 років у маркетингу · Творець онлайн-навчань з AI</p>
         <p class="author-bio">
-          [Ваша особиста історія: чому ви проти залежності від дорогих продюсерів, скільки запусків зробили, які результати студентів. Люди купують у людини — зробіть цей блок живим і справжнім, 3–4 речення від першої особи.]
+          Я знаю, як виглядає запуск, який виснажує. Саме тому я створила систему, де блог працює без постійної гонки — і навчаю інших робити так само. Без стресу, без хаосу, з реальним результатом.
         </p>
         <div class="author-nums">
-          <div><p class="a-n-val">[X]+</p><p class="a-n-lab">Запущених продуктів</p></div>
-          <div><p class="a-n-val">[Y]+</p><p class="a-n-lab">Учнів навчено</p></div>
-          <div><p class="a-n-val">[Z] р.</p><p class="a-n-lab">В AI &amp; EdTech</p></div>
+          <div><p class="a-n-val">7</p><p class="a-n-lab">Років у маркетингу</p></div>
+          <div><p class="a-n-val">3000$+</p><p class="a-n-lab">Доходи учениць</p></div>
+          <div><p class="a-n-val">∞</p><p class="a-n-lab">Без тотального контролю</p></div>
         </div>
       </div>
     </div>
@@ -1061,7 +1131,7 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 <!-- URGENCY + FINAL CTA -->
 <section class="cta-sec" id="order">
   <div class="cta-inner">
-    <div class="cta-scarcity" id="timerBlock">⏳ До підвищення ціни залишилось: <span id="countdown" style="font-weight:700;color:var(--gold3);">00:00:00</span></div>
+    <div class="cta-scarcity" id="timerBlock">🔥 Ціна зростає через: <span id="countdown" style="font-weight:700;color:var(--gold3);">15:00</span></div>
     <h2>Ви можете ще<br><em>6 місяців готуватись.</em></h2>
     <p style="font-size:1.15rem;">
       А можете через 5 днів вже мати продукт, сайт і перші заявки.<br>
@@ -1077,72 +1147,169 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
   <div class="footer-inner">
     <div class="f-logo"><em>AI</em>-Запуск</div>
     <div class="f-links">
-      <a href="mailto:[email]">[email]</a>
-      <a href="#">Telegram</a>
-      <a href="#">Політика конфіденційності</a>
+      <a href="https://www.instagram.com/daariiiaaaa_?igsh=Z3AxNmZ4dXF5Nmxh" target="_blank" class="f-insta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Instagram
+      </a>
+      <a href="#" onclick="openModal('privacy');return false;">Політика конфіденційності</a>
+      <a href="#" onclick="openModal('terms');return false;">Умови використання</a>
+      <a href="#" onclick="openModal('offer');return false;">Публічна оферта</a>
     </div>
   </div>
-  <div class="f-copy">© 2026 AI-Запуск. Всі права захищені.</div>
+  <div class="f-copy">© 2026 AI-Запуск · ФОП Садова Дарія · Всі права захищені.</div>
 </footer>
+
+<!-- ── LEGAL MODALS ── -->
+<div class="legal-overlay" id="legalOverlay" onclick="closeModal()"></div>
+
+<div class="legal-modal" id="modal-privacy">
+  <button class="modal-close" onclick="closeModal()">✕</button>
+  <h2>Політика конфіденційності</h2>
+  <p class="modal-date">Дата набрання чинності: 1 лютого 2026 р.</p>
+  <div class="modal-body">
+    <h3>1. Загальні положення</h3>
+    <p>ФОП Садова Дарія (далі — «Оператор») дотримується конфіденційності персональних даних користувачів сайту AI-Запуск (далі — «Сайт»). Ця Політика описує, які дані збираються, як вони використовуються та захищаються.</p>
+    <h3>2. Які дані збираються</h3>
+    <p>Під час відвідування Сайту можуть збиратися: IP-адреса, дані браузера та пристрою, сторінки відвідування, час і тривалість сесії. При оплаті через WayForPay платіжні дані обробляються безпосередньо платіжним сервісом і не зберігаються на нашому Сайті.</p>
+    <h3>3. Мета обробки даних</h3>
+    <p>Дані використовуються для: аналізу відвідуваності та покращення Сайту; показу релевантної реклами (Meta Pixel); обробки платежів; відповіді на звернення користувачів.</p>
+    <h3>4. Meta Pixel (Facebook)</h3>
+    <p>Сайт використовує Meta Pixel для відстеження конверсій та налаштування реклами. Дані передаються до Meta Platforms Inc. відповідно до їхньої Політики конфіденційності. Ви можете відмовитись від персоналізованої реклами в налаштуваннях Facebook.</p>
+    <h3>5. Передача даних третім особам</h3>
+    <p>Оператор не продає та не передає персональні дані третім особам, за винятком платіжного провайдера WayForPay та аналітичних сервісів (Meta), необхідних для роботи Сайту.</p>
+    <h3>6. Захист даних</h3>
+    <p>Оператор застосовує технічні та організаційні заходи для захисту даних від несанкціонованого доступу, втрати або розголошення.</p>
+    <h3>7. Права користувача</h3>
+    <p>Ви маєте право запросити доступ до своїх даних, їх виправлення або видалення. Для цього зверніться: <strong>daariiiaaaa_ в Instagram</strong>.</p>
+    <h3>8. Зміни до Політики</h3>
+    <p>Оператор залишає за собою право оновлювати цю Політику. Актуальна версія завжди доступна на Сайті.</p>
+  </div>
+</div>
+
+<div class="legal-modal" id="modal-terms">
+  <button class="modal-close" onclick="closeModal()">✕</button>
+  <h2>Умови використання</h2>
+  <p class="modal-date">Дата набрання чинності: 1 лютого 2026 р.</p>
+  <div class="modal-body">
+    <h3>1. Прийняття умов</h3>
+    <p>Використовуючи Сайт AI-Запуск, ви погоджуєтесь з цими Умовами. Якщо ви не погоджуєтесь — будь ласка, припиніть використання Сайту.</p>
+    <h3>2. Опис послуги</h3>
+    <p>AI-Запуск — це онлайн-навчання, що надає доступ до відеоуроків, матеріалів та підтримки для створення і запуску власного інфопродукту за допомогою AI-інструментів.</p>
+    <h3>3. Доступ до матеріалів</h3>
+    <p>Після оплати ви отримуєте особистий доступ до навчальних матеріалів. Передача доступу третім особам заборонена. Матеріали захищені авторським правом.</p>
+    <h3>4. Інтелектуальна власність</h3>
+    <p>Всі матеріали курсу (відео, тексти, шаблони, промпти) є власністю ФОП Садова Дарія. Копіювання, поширення або комерційне використання без письмового дозволу заборонено.</p>
+    <h3>5. Обмеження відповідальності</h3>
+    <p>Результати навчання залежать від особистих зусиль учасника. Оператор не гарантує конкретного фінансового результату, але надає всі необхідні інструменти та знання для досягнення мети.</p>
+    <h3>6. Заборонені дії</h3>
+    <p>Заборонено: поширювати матеріали курсу; використовувати контент для навчання конкурентів; здійснювати зворотню розробку навчальної системи.</p>
+    <h3>7. Зміни до умов</h3>
+    <p>Оператор може оновлювати ці Умови. Продовження використання Сайту означає прийняття оновлених умов.</p>
+  </div>
+</div>
+
+<div class="legal-modal" id="modal-offer">
+  <button class="modal-close" onclick="closeModal()">✕</button>
+  <h2>Публічна оферта</h2>
+  <p class="modal-date">Дата набрання чинності: 1 лютого 2026 р.</p>
+  <div class="modal-body">
+    <h3>1. Сторони договору</h3>
+    <p><strong>Виконавець:</strong> ФОП Садова Дарія (далі — Виконавець).<br><strong>Замовник:</strong> будь-яка фізична особа, яка здійснила оплату (далі — Замовник).</p>
+    <h3>2. Предмет договору</h3>
+    <p>Виконавець надає Замовнику доступ до онлайн-курсу «AI-Запуск» — навчальної програми тривалістю 5 днів з доступом до відеоматеріалів, шаблонів та бази промптів.</p>
+    <h3>3. Вартість послуг</h3>
+    <p><strong>Тариф Self-Made:</strong> 349 грн (знижена ціна в рамках акції).<br><strong>Тариф AI-Support:</strong> 1500 грн (знижена ціна в рамках акції).<br>Оплата здійснюється через платіжний сервіс WayForPay.</p>
+    <h3>4. Порядок надання послуг</h3>
+    <p>Доступ до матеріалів надається протягом 24 годин після підтвердження оплати. Старт навчання: 28 лютого 2026 р.</p>
+    <h3>5. Гарантія повернення коштів</h3>
+    <p>Замовник має право вимагати повернення коштів протягом 14 календарних днів з моменту оплати, якщо він не розпочав перегляд матеріалів. Для повернення необхідно звернутись через Instagram @daariiiaaaa_.</p>
+    <h3>6. Акцепт оферти</h3>
+    <p>Оплата послуг є повним і безумовним акцептом цієї оферти. З моменту оплати договір вважається укладеним.</p>
+    <h3>7. Форс-мажор</h3>
+    <p>Сторони звільняються від відповідальності за невиконання зобов'язань у разі обставин непереборної сили (воєнний стан, стихійні лиха тощо).</p>
+    <h3>8. Контакти</h3>
+    <p>З усіх питань звертайтесь: Instagram <strong>@daariiiaaaa_</strong></p>
+  </div>
+</div>
 
 <script>
 /* ── CURSOR ── */
-const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function raf(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(raf);})();
-document.querySelectorAll('a,button').forEach(el=>{
-  el.addEventListener('mouseenter',()=>ring.classList.add('big'));
-  el.addEventListener('mouseleave',()=>ring.classList.remove('big'));
-});
+(function(){
+  const cur=document.getElementById('cursor');
+  const ring=document.getElementById('cursorRing');
+  if(!cur||!ring)return;
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',function(e){
+    mx=e.clientX; my=e.clientY;
+    cur.style.left=mx+'px'; cur.style.top=my+'px';
+  });
+  (function raf(){
+    rx+=(mx-rx)*.12; ry+=(my-ry)*.12;
+    ring.style.left=rx+'px'; ring.style.top=ry+'px';
+    requestAnimationFrame(raf);
+  })();
+  document.querySelectorAll('a,button').forEach(function(el){
+    el.addEventListener('mouseenter',function(){ring.classList.add('big');});
+    el.addEventListener('mouseleave',function(){ring.classList.remove('big');});
+  });
+})();
 
 /* ── NEURAL CANVAS ── */
 (function(){
-  const c=document.getElementById('neural');
+  var c=document.getElementById('neural');
   if(!c)return;
-  const ctx=c.getContext('2d');
-  const hero=document.querySelector('.hero');
+  var ctx=c.getContext('2d');
+  var hero=document.querySelector('.hero');
   function resize(){c.width=hero.offsetWidth;c.height=hero.offsetHeight;}
-  resize();window.addEventListener('resize',resize);
-
-  const nodes=Array.from({length:38},()=>({
-    x:Math.random()*9999,y:Math.random()*9999,
-    vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,
-    r:Math.random()*2.5+1,
-    pulse:Math.random()*Math.PI*2,
-    speed:Math.random()*.02+.01
-  }));
-
+  resize();
+  window.addEventListener('resize',resize);
+  var nodes=[];
+  for(var i=0;i<38;i++){
+    nodes.push({
+      x:Math.random()*900,y:Math.random()*700,
+      vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,
+      r:Math.random()*2.5+1,
+      pulse:Math.random()*Math.PI*2,
+      speed:Math.random()*.02+.01
+    });
+  }
   function draw(){
     ctx.clearRect(0,0,c.width,c.height);
-    nodes.forEach(n=>{
-      n.x+=n.vx;n.y+=n.vy;n.pulse+=n.speed;
+    for(var i=0;i<nodes.length;i++){
+      var n=nodes[i];
+      n.x+=n.vx; n.y+=n.vy; n.pulse+=n.speed;
       if(n.x<0||n.x>c.width)n.vx*=-1;
       if(n.y<0||n.y>c.height)n.vy*=-1;
-      const a=.3+.2*Math.sin(n.pulse);
-      // node
-      ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(139,32,64,${a})`;ctx.fill();
-      // glow ring
-      const g=ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,n.r*4);
-      g.addColorStop(0,`rgba(184,149,90,${a*.4})`);
+      var a=.3+.2*Math.sin(n.pulse);
+      ctx.beginPath();
+      ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(139,32,64,'+a+')';
+      ctx.fill();
+      var g=ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,n.r*4);
+      g.addColorStop(0,'rgba(184,149,90,'+(a*.4)+')');
       g.addColorStop(1,'transparent');
-      ctx.beginPath();ctx.arc(n.x,n.y,n.r*4,0,Math.PI*2);
-      ctx.fillStyle=g;ctx.fill();
-    });
-    // edges
-    for(let i=0;i<nodes.length;i++){
-      for(let j=i+1;j<nodes.length;j++){
-        const dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y;
-        const d=Math.sqrt(dx*dx+dy*dy);
+      ctx.beginPath();
+      ctx.arc(n.x,n.y,n.r*4,0,Math.PI*2);
+      ctx.fillStyle=g;
+      ctx.fill();
+    }
+    for(var i=0;i<nodes.length;i++){
+      for(var j=i+1;j<nodes.length;j++){
+        var dx=nodes[i].x-nodes[j].x;
+        var dy=nodes[i].y-nodes[j].y;
+        var d=Math.sqrt(dx*dx+dy*dy);
         if(d<150){
-          const a=(1-d/150)*.18;
-          const grad=ctx.createLinearGradient(nodes[i].x,nodes[i].y,nodes[j].x,nodes[j].y);
-          grad.addColorStop(0,`rgba(139,32,64,${a})`);
-          grad.addColorStop(.5,`rgba(184,149,90,${a*.8})`);
-          grad.addColorStop(1,`rgba(139,32,64,${a})`);
-          ctx.beginPath();ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);
-          ctx.strokeStyle=grad;ctx.lineWidth=.8;ctx.stroke();
+          var alpha=(1-d/150)*.18;
+          var grad=ctx.createLinearGradient(nodes[i].x,nodes[i].y,nodes[j].x,nodes[j].y);
+          grad.addColorStop(0,'rgba(139,32,64,'+alpha+')');
+          grad.addColorStop(.5,'rgba(184,149,90,'+(alpha*.8)+')');
+          grad.addColorStop(1,'rgba(139,32,64,'+alpha+')');
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x,nodes[i].y);
+          ctx.lineTo(nodes[j].x,nodes[j].y);
+          ctx.strokeStyle=grad;
+          ctx.lineWidth=.8;
+          ctx.stroke();
         }
       }
     }
@@ -1153,17 +1320,17 @@ document.querySelectorAll('a,button').forEach(el=>{
 
 /* ── TYPEWRITER ── */
 (function(){
-  const el=document.getElementById('tw-text');
+  var el=document.getElementById('tw-text');
   if(!el)return;
-  const lines=[
+  var lines=[
     'AI зробить 90% роботи за вас.',
-    'Без команди. Без $1000+ бюджету.',
-    'Ви відкладали рік — запустіться за 5 днів.',
-    'Структура, сайт, воронка — все за тиждень.'
+    'Без команди. Без великих бюджетів.',
+    'Структура, сайт, воронка — за 5 днів.',
+    'Ваші знання вже готові. Почніть зараз.'
   ];
-  let li=0,ci=0,deleting=false,pause=0;
+  var li=0,ci=0,deleting=false,pause=0;
   function tick(){
-    const line=lines[li];
+    var line=lines[li];
     if(pause>0){pause--;setTimeout(tick,50);return;}
     if(!deleting){
       el.textContent=line.slice(0,++ci);
@@ -1178,83 +1345,113 @@ document.querySelectorAll('a,button').forEach(el=>{
   setTimeout(tick,1200);
 })();
 
-/* ── COUNTDOWN TIMER ── */
+/* ── COUNTDOWN TIMER 15 хв ── */
 (function(){
-  const el=document.getElementById('countdown');
+  var el=document.getElementById('countdown');
   if(!el)return;
-  // Дедлайн — 48 годин від першого відвідування (або фіксована дата)
-  const KEY='ailaunch_deadline';
-  let deadline=localStorage.getItem(KEY);
-  if(!deadline){
-    deadline=Date.now()+48*60*60*1000;
+  var KEY='ailaunch_dl_v2';
+  var deadline=localStorage.getItem(KEY);
+  if(!deadline||isNaN(+deadline)||+deadline<Date.now()){
+    deadline=Date.now()+15*60*1000;
     localStorage.setItem(KEY,deadline);
   }
+  function fmt(ms){
+    if(ms<=0)return'00:00';
+    var m=Math.floor(ms/60000);
+    var s=Math.floor((ms%60000)/1000);
+    return String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  }
   function update(){
-    const diff=+deadline-Date.now();
-    if(diff<=0){el.textContent='00:00:00';return;}
-    const h=Math.floor(diff/3600000);
-    const m=Math.floor((diff%3600000)/60000);
-    const s=Math.floor((diff%60000)/1000);
-    el.textContent=[h,m,s].map(n=>String(n).padStart(2,'0')).join(':');
-    setTimeout(update,1000);
+    var diff=+deadline-Date.now();
+    var t=fmt(diff);
+    el.textContent=t;
+    var st=document.getElementById('stickyTimer');
+    if(st)st.textContent=t;
+    if(diff>0)setTimeout(update,1000);
   }
   update();
 })();
 
 /* ── COUNTER ANIMATION ── */
 (function(){
-  const els=document.querySelectorAll('[data-count]');
-  const obs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
+  var els=document.querySelectorAll('[data-count]');
+  if(!els.length)return;
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
       if(!e.isIntersecting)return;
-      const el=e.target,target=+el.dataset.count,dur=1400;
-      const start=performance.now();
+      var el=e.target;
+      var target=+el.dataset.count;
+      var dur=1400;
+      var start=performance.now();
       (function frame(now){
-        const p=Math.min((now-start)/dur,1);
-        const ease=1-Math.pow(1-p,3);
-        el.textContent=Math.round(ease*target)+(target>=100?'+':'');
+        var p=Math.min((now-start)/dur,1);
+        var ease=1-Math.pow(1-p,3);
+        el.textContent=Math.round(ease*target)+(target>=10&&target!==0?'+':'');
         if(p<1)requestAnimationFrame(frame);
+        else el.textContent=target+(target>=10&&target!==0?'+':'');
       })(start);
       obs.unobserve(el);
     });
   },{threshold:.5});
-  els.forEach(el=>obs.observe(el));
+  els.forEach(function(el){obs.observe(el);});
 })();
 
 /* ── SCROLL REVEAL ── */
-const revObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('up');});
-},{threshold:.1});
-document.querySelectorAll('.r').forEach(el=>revObs.observe(el));
+(function(){
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting)e.target.classList.add('up');
+    });
+  },{threshold:.08});
+  document.querySelectorAll('.r').forEach(function(el){obs.observe(el);});
+})();
 
 /* ── FAQ ── */
-document.querySelectorAll('.faq-q').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    const item=btn.parentElement,open=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-    if(!open)item.classList.add('open');
+(function(){
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=btn.parentElement;
+      var open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
+      if(!open)item.classList.add('open');
+    });
   });
-});
+})();
 
 /* ── SMOOTH SCROLL ── */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+(function(){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
   });
-});
+})();
 
 /* ── STICKY CTA ── */
 (function(){
-  const bar=document.createElement('div');
+  var bar=document.createElement('div');
   bar.className='sticky-cta';
-  bar.innerHTML='<p class="sticky-cta-text">Відкладаєте вже давно? <strong>Запустіться за 5 днів.</strong></p><a href="#pricing" class="sticky-cta-btn">🔥 Зайняти місце</a>';
+  bar.innerHTML='<p class="sticky-cta-text">Ціна зростає через <strong id="stickyTimer">15:00</strong></p><a href="#pricing" class="sticky-cta-btn">🔥 Зайняти місце</a>';
   document.body.appendChild(bar);
-  window.addEventListener('scroll',()=>{
+  window.addEventListener('scroll',function(){
     if(window.scrollY>400)bar.classList.add('visible');
     else bar.classList.remove('visible');
   });
 })();
+
+/* ── LEGAL MODALS ── */
+function openModal(id){
+  document.getElementById('legalOverlay').classList.add('active');
+  document.getElementById('modal-'+id).classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('legalOverlay').classList.remove('active');
+  document.querySelectorAll('.legal-modal').forEach(function(m){m.classList.remove('active');});
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
 </script>
 </body>
 </html>
