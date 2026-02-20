@@ -300,7 +300,7 @@ section{position:relative;z-index:1;}
 .pain-card:hover .pain-num{color:rgba(139,32,64,.1);letter-spacing:.1em;}
 .pain-glyph{font-size:36px;margin-bottom:16px;}
 .pain-card h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.4rem;color:var(--ink);margin-bottom:10px;}
-.pain-card p{font-size:.9rem;color:var(--text);line-height:1.75;font-weight:300;}
+.pain-card p{font-size:.95rem;color:var(--text);line-height:1.75;font-weight:300;}
 
 /* ── SOLUTION ── */
 .solution-sec{background:var(--cream);}
@@ -479,7 +479,7 @@ section{position:relative;z-index:1;}
 .p-old{font-size:.875rem;color:var(--muted);text-decoration:line-through;margin-bottom:36px;}
 .p-line{height:1px;background:var(--border);margin:24px 0;}
 .p-feats{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:40px;}
-.p-feats li{display:flex;align-items:flex-start;gap:14px;font-size:.925rem;color:var(--text);font-weight:300;}
+.p-feats li{display:flex;align-items:flex-start;gap:14px;font-size:.97rem;color:var(--text);font-weight:300;}
 .p-check{width:20px;height:20px;border-radius:50%;flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:.65rem;}
 .p-check.y{background:rgba(139,32,64,.1);color:var(--marsala);}
 .p-check.n{background:rgba(0,0,0,.05);color:var(--muted);}
@@ -597,6 +597,7 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 
 /* ── FOR WHOM grid ── */
 @media(max-width:680px){.for-whom-grid{grid-template-columns:1fr!important;}}
+
 /* ── STICKY CTA ── */
 .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(250,246,240,.97);backdrop-filter:blur(16px);border-top:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;transform:translateY(100%);transition:transform .4s cubic-bezier(.25,.8,.25,1);box-shadow:0 -4px 24px rgba(139,32,64,.08);}
 .sticky-cta.visible{transform:translateY(0);}
@@ -639,8 +640,8 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 
   /* HERO */
   .hero{padding:96px 20px 56px;min-height:auto;}
-  .hero h1{font-size:2.15rem;line-height:1.1;letter-spacing:-.01em;margin-bottom:18px;}
-  .hero-typewriter{font-size:1rem;min-height:1.5rem;margin-bottom:18px;}
+  .hero h1{font-size:2.3rem;line-height:1.1;letter-spacing:-.01em;margin-bottom:18px;}
+  .hero-typewriter{font-size:1.1rem;min-height:2rem;margin-bottom:20px;}
   .hero-sub{font-size:.95rem;margin-bottom:28px;padding:0;}
   .hero-cta-row{flex-direction:column;gap:10px;}
   .btn-main{padding:17px 20px;font-size:.85rem;text-align:center;justify-content:center;border-radius:4px;letter-spacing:.05em;}
@@ -649,9 +650,14 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
   .trust-item{font-size:.75rem;}
 
   /* STATS */
-  .stats-inner{gap:20px 16px;padding:0 20px;justify-content:space-between;}
+  .stats-inner{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:24px 12px;padding:0 20px;
+    justify-items:center;
+  }
+  .stat-block:nth-child(3){grid-column:1/3;} /* 90% на всю ширину знизу */
   .stat-val{font-size:2rem;}
-  .stat-lab{font-size:.6rem;}
+  .stat-lab{font-size:.7rem;text-align:center;}
   .stats-bar > div:last-child{display:none;}/* ховаємо чіпи на мобільному */
 
   /* PAIN */
@@ -673,7 +679,7 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
   .roadmap-list::before{left:34px;}
   .day-row{grid-template-columns:70px 1fr;padding-bottom:28px;}
   .day-orb{width:28px;height:28px;font-size:.85rem;}
-  .day-body h3{font-size:1.1rem;line-height:1.3;}
+  .day-body h3{font-size:1.15rem;line-height:1.3;}
   .day-meta{font-size:.65rem;}
 
   /* RESULT */
@@ -698,8 +704,8 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 
   /* FAQ */
   .faq-sec .wrap{padding:56px 20px;}
-  .faq-q{padding:18px 18px;font-size:.95rem;}
-  .faq-ans-inner{padding:0 18px 18px;font-size:.875rem;}
+  .faq-q{padding:18px 18px;font-size:1rem;}
+  .faq-ans-inner{padding:0 18px 18px;font-size:.92rem;}
 
   /* CTA */
   .cta-sec{padding:72px 20px;}
@@ -708,7 +714,7 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
 
   /* STICKY */
   .sticky-cta{padding:10px 16px;gap:8px;}
-  .sticky-cta-text{font-size:.8rem;}
+  .sticky-cta-text{font-size:.85rem;}
   .sticky-cta-btn{padding:9px 16px;font-size:.75rem;}
 }
 
@@ -791,6 +797,53 @@ footer{background:var(--cream3);border-top:1px solid var(--border);padding:52px 
   .modal-body h3{font-size:1rem;}
   .modal-body p{font-size:.875rem;}
 }
+
+/* ── HERO CTA BUTTON ── */
+.hero-cta{
+  width:100%;max-width:420px;
+  margin:0 auto 28px;display:block;
+  text-align:center;
+}
+
+/* ── HERO BULLETS ── */
+.hero-bullets{
+  max-width:460px;margin:0 auto;
+  display:flex;flex-direction:column;gap:10px;
+}
+.hb-item{
+  display:flex;align-items:center;gap:12px;
+  font-size:.9rem;color:var(--text);font-weight:400;
+  line-height:1.5;
+}
+.hb-check{
+  flex-shrink:0;width:22px;height:22px;
+  border-radius:50%;
+  background:rgba(139,32,64,.1);
+  color:var(--marsala);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.7rem;font-weight:700;
+}
+
+
+/* ── HERO TIMER ── */
+.hero-timer{
+  margin-top:32px;
+  padding:16px 24px;border-radius:6px;
+  background:rgba(139,32,64,.05);
+  border:1px solid rgba(139,32,64,.12);
+  font-size:.9rem;color:var(--text);
+  text-align:center;line-height:1.6;
+}
+.hero-timer strong{color:var(--marsala);font-weight:600;}
+@media(max-width:600px){
+  .hero-timer{font-size:.88rem;padding:14px 18px;margin-top:28px;}
+}
+@media(max-width:600px){
+  .hero-timer-deleted{padding:24px 28px;max-width:100%;}
+  .hero-cta{max-width:100%;}
+  .hero-bullets{max-width:100%;}
+  .hb-item{font-size:.92rem;}
+}
 </style>
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -824,36 +877,33 @@ src="https://www.facebook.com/tr?id=1323895059547773&ev=PageView&noscript=1"/></
   <div class="hero-inner">
     <div class="start-badge r">📅 Старт навчання — <strong>28 лютого</strong></div>
 
-    <h1>Запустіть курс<br>за <em>5 днів</em><br>— без команди<br>і прокрастинації</h1>
+    <h1>Запустіть свій курс за <em>5 днів</em><br>за допомогою AI</h1>
 
     <div class="hero-typewriter">
       <span id="tw-text"></span><span class="tw-cursor"></span>
     </div>
 
-    <p class="hero-sub">
-      AI зробить 90% структури, сайту і воронки.<br>
-      Ви — тільки <strong>приймаєте рішення і запускаєтесь.</strong>
-    </p>
+    <a href="https://secure.wayforpay.com/button/b35ed70a63688" target="_blank" class="btn-main hero-cta" onclick="fbq('track','InitiateCheckout',{content_name:'Hero-CTA',value:349,currency:'UAH'})">
+      🔥 Хочу запуститись
+    </a>
 
-    <div class="hero-cta-row">
-      <a href="#pricing" class="btn-main">🔥 Хочу запуститись за 5 днів</a>
-      <a href="#program" class="btn-ghost mobile-hide">Як це працює ↓</a>
+    <!-- Bullets -->
+    <div class="hero-bullets r d1">
+      <div class="hb-item"><span class="hb-check">✓</span> Без команди і бюджету $1000+</div>
+      <div class="hb-item"><span class="hb-check">✓</span> 90% роботи зробить AI за вас</div>
+      <div class="hb-item"><span class="hb-check">✓</span> Гарантія повернення 14 днів</div>
     </div>
 
-    <p style="margin-top:16px;font-size:.85rem;color:var(--muted);animation:fadeUp .8s .5s ease both;opacity:0;">
-      Підійде тим, хто застряг на етапі «я ще допрацьовую програму»
-    </p>
-
-    <div class="hero-trust">
-      <div class="trust-item"><span>✦</span> 0 розробників</div>
-      <div class="trust-item"><span>✦</span> 0 технічних знань</div>
-      <div class="trust-item"><span>✦</span> Гарантія 14 днів</div>
-      <div class="trust-item"><span>✦</span> Від 349 грн</div>
+    <!-- Urgency Timer -->
+    <div class="hero-timer r d2">
+      ⏰ До підняття ціни залишилось: <strong id="heroTimer">14:58</strong><br>
+      Зараз <strong>349 грн</strong>, потім <strong>999 грн</strong>
     </div>
   </div>
 </section>
 
-<!-- STATS BAR — переосмислено як "зняття страху" -->
+<!-- STATS SECTION -->
+<section class="stats-sec">
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat-block">
@@ -866,7 +916,7 @@ src="https://www.facebook.com/tr?id=1323895059547773&ev=PageView&noscript=1"/></
     </div>
     <div class="stat-block">
       <div class="stat-val" data-count="90">0</div>
-      <div class="stat-lab">% роботи бере AI</div>
+      <div class="stat-lab">AI бере на себе</div>
     </div>
   </div>
   <div style="max-width:900px;margin:32px auto 0;padding:0 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
@@ -876,6 +926,7 @@ src="https://www.facebook.com/tr?id=1323895059547773&ev=PageView&noscript=1"/></
     <span style="padding:8px 18px;border-radius:100px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.8rem;color:rgba(232,207,160,.8);">✓ Сценарії прогріву — AI</span>
   </div>
 </div>
+</section>
 
 <!-- PAIN — з емоційним вступом -->
 <section class="pain-sec">
@@ -1402,27 +1453,7 @@ src="https://www.facebook.com/tr?id=1323895059547773&ev=PageView&noscript=1"/></
 (function(){
   var el=document.getElementById('tw-text');
   if(!el)return;
-  var lines=[
-    'AI зробить 90% роботи за вас.',
-    'Без команди. Без великих бюджетів.',
-    'Структура, сайт, воронка — за 5 днів.',
-    'Ваші знання вже готові. Почніть зараз.'
-  ];
-  var li=0,ci=0,deleting=false,pause=0;
-  function tick(){
-    var line=lines[li];
-    if(pause>0){pause--;setTimeout(tick,50);return;}
-    if(!deleting){
-      el.textContent=line.slice(0,++ci);
-      if(ci===line.length){deleting=true;pause=60;}
-      setTimeout(tick,65);
-    } else {
-      el.textContent=line.slice(0,--ci);
-      if(ci===0){deleting=false;li=(li+1)%lines.length;pause=20;}
-      setTimeout(tick,30);
-    }
-  }
-  setTimeout(tick,1200);
+  el.textContent='Для експертів, які давно відкладають запуск';
 })();
 
 /* ── COUNTDOWN TIMER 15 хв ── */
@@ -1447,6 +1478,8 @@ src="https://www.facebook.com/tr?id=1323895059547773&ev=PageView&noscript=1"/></
     el.textContent=t;
     var st=document.getElementById('stickyTimer');
     if(st)st.textContent=t;
+    var ht=document.getElementById('heroTimer');
+    if(ht)ht.textContent=t;
     if(diff>0)setTimeout(update,1000);
   }
   update();
@@ -1466,9 +1499,9 @@ src="https://www.facebook.com/tr?id=1323895059547773&ev=PageView&noscript=1"/></
       (function frame(now){
         var p=Math.min((now-start)/dur,1);
         var ease=1-Math.pow(1-p,3);
-        el.textContent=Math.round(ease*target)+(target>=10&&target!==0?'+':'');
+        el.textContent=Math.round(ease*target)+(target===90?'%':target>=10&&target!==0?'+':'');
         if(p<1)requestAnimationFrame(frame);
-        else el.textContent=target+(target>=10&&target!==0?'+':'');
+        else el.textContent=target+(target===90?'%':target>=10&&target!==0?'+':'');
       })(start);
       obs.unobserve(el);
     });
@@ -1507,6 +1540,7 @@ src="https://www.facebook.com/tr?id=1323895059547773&ev=PageView&noscript=1"/></
     });
   });
 })();
+
 
 /* ── STICKY CTA ── */
 (function(){
